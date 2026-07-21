@@ -128,7 +128,7 @@ export const dictionary = {
           name: 'STARTER',
           stages: 'Diagnóstico',
           who: 'Organizaciones que aún no saben en qué estado están sus datos.',
-          desc: 'Un primer acercamiento para entender dónde estás parado y qué oportunidades existen.',
+          desc: 'Un primer acercamiento para entender en qué punto se encuentra tu operación y qué oportunidades existen.',
         },
         {
           name: 'GROWTH',
@@ -226,7 +226,7 @@ export const dictionary = {
           desc: 'We understand the particularities of working with data both in companies and public institutions.',
         },
         {
-          title: 'No smoke: concrete deliverables',
+          title: 'No smoke and mirrors: concrete deliverables',
           desc: 'Every stage has clear deliverables, without unnecessary jargon or empty promises.',
         },
       ],
@@ -296,7 +296,7 @@ export const dictionary = {
           name: 'STARTER',
           stages: 'Diagnosis',
           who: 'Organizations that don\u2019t yet know the state of their data.',
-          desc: 'A first step to understand where you stand and what opportunities exist.',
+          desc: 'A first step to understand where your operation stands today and what opportunities exist.',
         },
         {
           name: 'GROWTH',
