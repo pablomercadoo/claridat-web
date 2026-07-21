@@ -80,11 +80,10 @@ function Home() {
 
       {/* Strip de datos clave */}
       <section className="border-y border-[var(--color-border)] bg-[var(--color-muted)]">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 py-10 md:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-3 gap-8 px-6 py-10">
           {[
             { label: t.home.stripSede, value: t.home.stripSedeValue },
             { label: t.home.stripMercado, value: t.home.stripMercadoValue },
-            { label: t.home.stripPaquetes, value: t.home.stripPaquetesValue },
             { label: t.home.stripPipeline, value: t.home.stripPipelineValue },
           ].map((item) => (
             <div key={item.label}>

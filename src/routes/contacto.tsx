@@ -37,7 +37,7 @@ function Contacto() {
     const body = encodeURIComponent(
       `Nombre: ${form.name}\nEmpresa: ${form.company}\nEmail: ${form.email}\n\n${form.message}`,
     )
-    window.location.href = `mailto:rodrigo@claridat.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:contacto@claridat.com.mx?subject=${subject}&body=${body}`
   }
 
   return (
@@ -48,7 +48,7 @@ function Contacto() {
       <div className="mt-14 grid gap-12 md:grid-cols-2">
         <div className="flex flex-col gap-6">
           <a
-            href="mailto:rodrigo@claridat.com"
+            href="mailto:contacto@claridat.com.mx"
             className="flex items-center gap-4 rounded-2xl border border-[var(--color-border)] p-5 transition-colors hover:border-[var(--color-accent)]"
           >
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
@@ -58,12 +58,12 @@ function Contacto() {
               <div className="text-xs font-medium uppercase tracking-wide text-[var(--color-muted-foreground)]">
                 {t.contacto.emailLabel}
               </div>
-              <div className="font-medium text-[var(--color-primary)]">rodrigo@claridat.com</div>
+              <div className="font-medium text-[var(--color-primary)]">contacto@claridat.com.mx</div>
             </div>
           </a>
 
           <a
-            href="https://wa.me/529992689654"
+            href="https://wa.me/529996352712"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 rounded-2xl border border-[var(--color-border)] p-5 transition-colors hover:border-[var(--color-accent)]"
@@ -75,7 +75,24 @@ function Contacto() {
               <div className="text-xs font-medium uppercase tracking-wide text-[var(--color-muted-foreground)]">
                 {t.contacto.whatsappLabel}
               </div>
-              <div className="font-medium text-[var(--color-primary)]">+52 999 268 9654</div>
+              <div className="font-medium text-[var(--color-primary)]">+52 999 635 2712</div>
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/529995112217"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 rounded-2xl border border-[var(--color-border)] p-5 transition-colors hover:border-[var(--color-accent)]"
+          >
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+              <MessageCircle size={20} />
+            </div>
+            <div>
+              <div className="text-xs font-medium uppercase tracking-wide text-[var(--color-muted-foreground)]">
+                {t.contacto.whatsappLabel}
+              </div>
+              <div className="font-medium text-[var(--color-primary)]">+52 999 511 2217</div>
             </div>
           </a>
 

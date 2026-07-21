@@ -27,16 +27,24 @@ export function SiteFooter() {
 
         <div className="flex flex-col gap-3 text-sm">
           <span className="mb-1 font-display font-semibold text-white/90">{t.nav.contacto}</span>
-          <a href="mailto:rodrigo@claridat.com" className="flex items-center gap-2 text-white/70 hover:text-white transition-colors">
-            <Mail size={16} /> rodrigo@claridat.com
+          <a href="mailto:contacto@claridat.com.mx" className="flex items-center gap-2 text-white/70 hover:text-white transition-colors">
+            <Mail size={16} /> contacto@claridat.com.mx
           </a>
           <a
-            href="https://wa.me/529992689654"
+            href="https://wa.me/529996352712"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
           >
-            <MessageCircle size={16} /> +52 999 268 9654
+            <MessageCircle size={16} /> +52 999 635 2712
+          </a>
+          <a
+            href="https://wa.me/529995112217"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+          >
+            <MessageCircle size={16} /> +52 999 511 2217
           </a>
           <span className="flex items-center gap-2 text-white/70">
             <MapPin size={16} /> {t.contacto.locationValue}

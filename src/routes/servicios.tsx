@@ -9,13 +9,12 @@ export const Route = createFileRoute('/servicios')({
       { title: 'Servicios — Claridat Experience' },
       {
         name: 'description',
-        content:
-          'Conoce el pipeline Claridat Experience de 5 etapas y nuestros paquetes STARTER, GROWTH, DECISION y PARTNER.',
+        content: 'Conoce el pipeline Claridat Experience: 5 etapas para pasar de datos dispersos a decisiones accionables.',
       },
       { property: 'og:title', content: 'Servicios — Claridat Experience' },
       {
         property: 'og:description',
-        content: 'Pipeline de 5 etapas y 4 paquetes de consultoría de datos.',
+        content: 'Pipeline de 5 etapas de consultoría de datos e inteligencia de negocios.',
       },
     ],
   }),
@@ -78,40 +77,17 @@ function Servicios() {
         </div>
       </section>
 
-      {/* Paquetes */}
-      <section className="bg-[var(--color-muted)] py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center font-display text-2xl font-semibold text-[var(--color-primary)]">
-            {t.servicios.packagesTitle}
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-[var(--color-muted-foreground)]">
-            {t.servicios.packagesSubtitle}
-          </p>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {t.servicios.packages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className="flex flex-col rounded-2xl border border-[var(--color-border)] bg-white p-6"
-              >
-                <span className="font-display text-lg font-bold tracking-wide text-[var(--color-primary)]">
-                  {pkg.name}
-                </span>
-                <span className="mt-1 text-xs font-medium uppercase tracking-wide text-[var(--color-accent)]">
-                  {pkg.stages}
-                </span>
-                <p className="mt-4 text-sm leading-relaxed text-[var(--color-muted-foreground)]">{pkg.desc}</p>
-                <p className="mt-3 text-xs italic text-[var(--color-muted-foreground)]">{pkg.who}</p>
-                <Link
-                  to="/contacto"
-                  className={`${buttonVariants({ variant: 'outline', size: 'sm' })} mt-6`}
-                >
-                  {t.servicios.quoteCta}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* CTA final */}
+      <section className="mx-auto max-w-4xl px-6 py-24 text-center">
+        <h2 className="font-display text-3xl font-semibold text-[var(--color-primary)]">
+          {t.home.finalCtaTitle}
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-[var(--color-muted-foreground)]">
+          {t.home.finalCtaSubtitle}
+        </p>
+        <Link to="/contacto" className={`${buttonVariants({ variant: 'primary', size: 'lg' })} mt-8`}>
+          {t.servicios.quoteCta}
+        </Link>
       </section>
     </div>
   )
