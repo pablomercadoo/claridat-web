@@ -1,6 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useI18n } from '#/lib/i18n'
-import { Logo } from '#/components/logo'
+import teamRodrigo from '#/assets/team-rodrigo.jpg'
+import teamPablo from '#/assets/team-pablo.jpg'
+
+const teamPhotos = [teamRodrigo, teamPablo]
 
 export const Route = createFileRoute('/nosotros')({
   head: () => ({
@@ -61,16 +64,20 @@ function Nosotros() {
           {t.nosotros.equipoTitle}
         </h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          {t.nosotros.equipo.map((member) => (
+          {t.nosotros.equipo.map((member, i) => (
             <div
               key={member.name}
-              className="flex items-center gap-4 rounded-2xl border border-[var(--color-border)] p-5"
+              className="flex flex-col items-center gap-4 rounded-2xl border border-[var(--color-border)] p-8 text-center"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--color-muted)]">
-                <Logo variant="dark" showWordmark={false} />
-              </div>
+              <img
+                src={teamPhotos[i]}
+                alt={member.name}
+                className="h-32 w-32 rounded-full object-cover ring-4 ring-[var(--color-muted)]"
+              />
               <div>
-                <div className="font-display font-semibold text-[var(--color-primary)]">{member.name}</div>
+                <div className="font-display text-lg font-semibold text-[var(--color-primary)]">
+                  {member.name}
+                </div>
                 <div className="text-sm text-[var(--color-muted-foreground)]">{member.role}</div>
               </div>
             </div>
