@@ -10,18 +10,21 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Claridat — Consultoría de datos' },
+      { title: 'Claridat | Datos claros. Decisiones inteligentes.' },
       {
         name: 'description',
         content:
-          'Consultoría de datos e inteligencia de negocios en Mérida, Yucatán. De caos a claridad.',
+          'Claridat ayuda a empresas e instituciones a ordenar, integrar y analizar su información mediante soluciones de datos, automatización y Business Intelligence.',
       },
-      { property: 'og:title', content: 'Claridat — Consultoría de datos' },
+      { name: 'twitter:card', content: 'summary' },
+      { property: 'og:site_name', content: 'Claridat' },
+      { property: 'og:title', content: 'Claridat | Datos claros. Decisiones inteligentes.' },
       {
         property: 'og:description',
-        content: 'Convertimos datos dispersos en decisiones accionables para empresas y gobierno.',
+        content: 'Convertimos información dispersa en herramientas de control, análisis y decisión.',
       },
       { property: 'og:type', content: 'website' },
+      { property: 'og:locale', content: 'es_MX' },
     ],
   }),
   component: RootComponent,

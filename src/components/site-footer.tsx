@@ -12,18 +12,17 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
           <Logo variant="light" />
-          <p className="mt-4 max-w-xs text-sm text-white/70">
-            {t.home.heroSubtitle}
-          </p>
+          <p className="mt-4 max-w-xs text-sm text-white/70">{t.footer.tagline}</p>
         </div>
 
-        <div className="flex flex-col gap-2 text-sm">
-          <span className="mb-1 font-display font-semibold text-white/90">{t.nav.servicios}</span>
+        <nav aria-label={t.footer.navTitle} className="flex flex-col gap-2 text-sm">
+          <span className="mb-1 font-display font-semibold text-white/90">{t.footer.navTitle}</span>
           <Link to="/" className="text-white/70 hover:text-white transition-colors">{t.nav.home}</Link>
+          <Link to="/" hash="proceso" className="text-white/70 hover:text-white transition-colors">{t.nav.howWeWork}</Link>
+          <Link to="/servicios" className="text-white/70 hover:text-white transition-colors">{t.nav.solutions}</Link>
           <Link to="/nosotros" className="text-white/70 hover:text-white transition-colors">{t.nav.nosotros}</Link>
-          <Link to="/servicios" className="text-white/70 hover:text-white transition-colors">{t.nav.servicios}</Link>
           <Link to="/contacto" className="text-white/70 hover:text-white transition-colors">{t.nav.contacto}</Link>
-        </div>
+        </nav>
 
         <div className="flex flex-col gap-3 text-sm">
           <span className="mb-1 font-display font-semibold text-white/90">{t.nav.contacto}</span>
@@ -31,7 +30,7 @@ export function SiteFooter() {
             <Mail size={16} /> contacto@claridat.com.mx
           </a>
           <a
-            href="https://wa.me/529996352712"
+            href={`https://wa.me/529996352712?text=${encodeURIComponent(t.contacto.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
@@ -39,7 +38,7 @@ export function SiteFooter() {
             <MessageCircle size={16} /> +52 999 635 2712
           </a>
           <a
-            href="https://wa.me/529995112217"
+            href={`https://wa.me/529995112217?text=${encodeURIComponent(t.contacto.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +11,42 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Claridat — Consultoría de datos</title>
+    <title>Claridat | Datos claros. Decisiones inteligentes.</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Claridat",
+        "url": "https://claridat.com.mx",
+        "email": "contacto@claridat.com.mx",
+        "telephone": ["+52 999 635 2712", "+52 999 511 2217"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mérida",
+          "addressRegion": "Yucatán",
+          "addressCountry": "MX"
+        },
+        "description": "Consultoría de datos e inteligencia de negocios: diagnóstico, estructuración, integración, análisis y evolución de información para empresas e instituciones."
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
+    <!--
+      Formulario estático oculto: permite que Netlify detecte y registre el
+      formulario "contacto" durante el build, ya que el formulario real se
+      renderiza del lado del cliente (SPA) en /contacto.
+    -->
+    <form name="contacto" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="area" />
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
