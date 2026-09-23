@@ -18,7 +18,7 @@ export const dictionary = {
       metaDescription:
         'Consultoría de datos e inteligencia de negocios en Mérida, Yucatán. Convertimos datos dispersos en decisiones accionables.',
       heroEyebrow: 'Consultoría de datos e inteligencia de negocios',
-      heroTitle: 'De caos a claridad',
+      heroTitle: 'Datos claros. Decisiones inteligentes',
       heroSubtitle:
         'Ayudamos a empresas y gobierno a ordenar sus datos, construir control real sobre su información y tomar decisiones con evidencia, no con intuición.',
       ctaPrimary: 'Agendar diagnóstico',
